@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
-import { Button } from "@mui/material";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Koalas</h1>
-      <Button>Hello World</Button>
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        <h1>Koalas</h1>
+        <Button>Hello World</Button>
+      </div>
+    </ChakraProvider>
   );
 }
 
