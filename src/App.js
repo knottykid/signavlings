@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import Navbar from "./components/navbar/Navbar";
 import ProfileCard from "./components/ProfileList/ProfileCard";
 
 function App() {
   return (
     <ChakraProvider>
       <div className="App">
+        <Navbar />
         <h1>Koalas</h1>
       </div>
       <ProfileCard
