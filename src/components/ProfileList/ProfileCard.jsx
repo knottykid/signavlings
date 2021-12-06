@@ -11,8 +11,7 @@ import {
 
 function ProfileCard({name, image, onClickCard}) {
     return (
-    
-          <Center py={6} onClick={ onClickCard }>
+          <Center py={6} onClick={ onClickCard } data-testid='profileCard'>
             <Box
               maxW={'270px'}
               w={'full'}
@@ -26,12 +25,13 @@ function ProfileCard({name, image, onClickCard}) {
                 src={
                     image
                 }
+                alt='profilePic'
                 objectFit={'cover'}
               />
              
               <Box p={2} className='card-bg-color'>
                 <Stack spacing={0} align={'center'} mb={5}>
-                  <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+                  <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'} >
                     {name}
                   </Heading>
                 </Stack>
