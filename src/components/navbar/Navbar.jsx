@@ -71,5 +71,4 @@ const Navbar = (props) => {
     </Flex>
   );
 };
-
 export default Navbar;
