@@ -9,13 +9,14 @@ import {
   useColorMode,
   useColorModeValue,
   IconButton,
+  Img,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleToggle = () => (isOpen ? onClose() : onOpen());
+  // const handleToggle = () => (isOpen ? onClose() : onOpen());
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
@@ -43,9 +44,9 @@ const Navbar = (props) => {
         {...props}
       />
       <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-          Signavio by SAP
-        </Heading>
+        <Box w={100}>
+          <Img src="images/Signavio_Logo_Claim_RGB.png" />
+        </Box>
       </Flex>
 
       <Stack
