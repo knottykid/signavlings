@@ -1057,13 +1057,13 @@
     "pretty-format" "^27.0.2"
 
 "@testing-library/jest-dom@^5.15.1":
-  "integrity" "sha512-kmj8opVDRE1E4GXyLlESsQthCXK7An28dFWxhiMwD7ZUI7ZxA6sjdJRxLerD9Jd8cHX4BDc1jzXaaZKqzlUkvg=="
-  "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.15.1.tgz"
-  "version" "5.15.1"
+  "integrity" "sha512-ajUJdfDIuTCadB79ukO+0l8O+QwN0LiSxDaYUTI4LndbbUsGi6rWU1SCexXzBA2NSjlVB9/vbkasQIL3tmPBjw=="
+  "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.16.1.tgz"
+  "version" "5.16.1"
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
-    "aria-query" "^4.2.2"
+    "aria-query" "^5.0.0"
     "chalk" "^3.0.0"
     "css" "^3.0.0"
     "css.escape" "^1.5.1"
@@ -2565,14 +2565,14 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-db@^1.0.30000529", "caniuse-db@^1.0.30000618", "caniuse-db@^1.0.30000639":
-  "integrity" "sha512-XuK3HcryBO+g2aRRv/mOtAjXP/sUiLgzAqc39LYkcS5LnZszSflqnssPHCSQzTwj+8e7B3oeztMGzlZ7NRQjqg=="
-  "resolved" "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30001284.tgz"
-  "version" "1.0.30001284"
+  "integrity" "sha512-3bYDZDDQcdWJJFO8i+hUbaJJcHyTPWAzRWx8pOG0kmmBCTUB6M8eJ83AniGVj7CFy1QhqTbI+HmQKAVjUdwKfg=="
+  "resolved" "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30001285.tgz"
+  "version" "1.0.30001285"
 
 "caniuse-lite@^1.0.30001280":
-  "integrity" "sha512-t28SKa7g6kiIQi6NHeOcKrOrGMzCRrXvlasPwWC26TH2QNdglgzQIRUuJ0cR3NeQPH+5jpuveeeSFDLm2zbkEw=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001284.tgz"
-  "version" "1.0.30001284"
+  "integrity" "sha512-KAOkuUtcQ901MtmvxfKD+ODHH9YVDYnBt+TGYSz2KIfnq22CiArbUxXPN9067gNbgMlnNYRSwho8OPXZPALB9Q=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001285.tgz"
+  "version" "1.0.30001285"
 
 "cardinal@^2.1.1":
   "integrity" "sha1-fMEFXYItISlU0HsIXeolHMe8VQU="
@@ -2727,12 +2727,11 @@
     "restore-cursor" "^1.0.1"
 
 "cli-table@^0.3.1":
-  "integrity" "sha512-7eA6hFtAZwVx3dWAGoaBqTrzWko5jRUFKpHT64ZHkJpaA3y5wf5NlLjguqTRmqycatJZiwftODYYyGNLbQ7MuA=="
-  "resolved" "https://registry.npmjs.org/cli-table/-/cli-table-0.3.9.tgz"
-  "version" "0.3.9"
+  "integrity" "sha512-xBb4vPd0SyDRWf4aSnyXvAcICMuBgJjrrVg7qyyMo5NC6t5cju8c+FwiuBWyCE68ebqD9WtjyHOS8RNEJ5LbGA=="
+  "resolved" "https://registry.npmjs.org/cli-table/-/cli-table-0.3.10.tgz"
+  "version" "0.3.10"
   dependencies:
     "colors" "1.0.3"
-    "strip-ansi" "^6.0.1"
 
 "cli-usage@^0.1.1":
   "integrity" "sha512-Q/s1S4Jz5LYI0LQ+XiFQCXkhMzn244ddyIffni8JIq/kL95DvQomVQ0cJC41c76hH9/FmZGY7rZB53y/bXHtRA=="
@@ -3006,9 +3005,9 @@
     "toggle-selection" "^1.0.6"
 
 "core-js-pure@^3.19.0":
-  "integrity" "sha512-5LkcgQEy8pFeVnd/zomkUBSwnmIxuF1C8E9KrMAbOc8f34IBT9RGvTYeNDdp1PnvMJrrVhvk1hg/yVV5h/znlg=="
-  "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.19.2.tgz"
-  "version" "3.19.2"
+  "integrity" "sha512-N3JruInmCyt7EJj5mAq3csCgGYgiSqu7p7TQp2KOztr180/OAIxyIvL1FCjzgmQk/t3Yniua50Fsak7FShI9lA=="
+  "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.19.3.tgz"
+  "version" "3.19.3"
 
 "core-js@^2.4.0", "core-js@^2.5.0":
   "integrity" "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
@@ -3508,9 +3507,9 @@
   "version" "1.1.1"
 
 "electron-to-chromium@^1.1.0", "electron-to-chromium@^1.2.7", "electron-to-chromium@^1.3.896":
-  "integrity" "sha512-tFgA40Iq2oy4k2PnZrLJowbgpij+lD6ZLxkw8Ht1NKTYyN8dvSvC5xlo8X0WW2jqhKSzITrbr5mpB4/AZ/8OUA=="
-  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.10.tgz"
-  "version" "1.4.10"
+  "integrity" "sha512-2OhsaYgsWGhWjx2et8kaUcdktPbBGjKM2X0BReUCKcSCPttEY+hz2zie820JLbttU8jwL92+JJysWwkut3wZgA=="
+  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.11.tgz"
+  "version" "1.4.11"
 
 "emoji-regex@^6.1.0":
   "integrity" "sha512-PAHp6TxrCy7MGMFidro8uikr+zlJJKJ/Q6mm2ExZ7HwkyR9lSVFfE3kt36qcwa24BQL7y0G9axycGjK1A/0uNQ=="
@@ -6882,13 +6881,11 @@
     "use-callback-ref" "^1.2.5"
     "use-sidecar" "^1.0.5"
 
-
 "react-icons@^4.3.1":
   "integrity" "sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.3.1.tgz"
   "version" "4.3.1"
 
->>>>>>> master
 "react-is@^16.7.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -7766,13 +7763,6 @@
   "version" "4.0.0"
   dependencies:
     "ansi-regex" "^3.0.0"
-
-"strip-ansi@^6.0.1":
-  "integrity" "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A=="
-  "resolved" "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
-  "version" "6.0.1"
-  dependencies:
-    "ansi-regex" "^5.0.1"
 
 "strip-bom@^2.0.0":
   "integrity" "sha1-YhmoVhZSBJHzV4i9vxRHqZx+aw4="
