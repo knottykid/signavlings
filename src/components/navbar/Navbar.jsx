@@ -2,7 +2,12 @@ import React from "react";
 import {
   Box,
   Stack,
-  Heading,
+  Input,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
   Flex,
   Button,
   useDisclosure,
@@ -10,13 +15,15 @@ import {
   useColorModeValue,
   IconButton,
   Img,
+  InputGroup,
+  InputRightAddon,
 } from "@chakra-ui/react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  // const handleToggle = () => (isOpen ? onClose() : onOpen());
+  const handleToggle = () => (isOpen ? onClose() : onOpen());
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
@@ -48,7 +55,19 @@ const Navbar = (props) => {
           <Img src="images/Signavio_Logo_Claim_RGB.png" />
         </Box>
       </Flex>
-
+      <Popover>
+        <PopoverTrigger>
+          <IconButton icon={<FaSearch />} background="#AD0F5B" />
+        </PopoverTrigger>
+        <PopoverContent>
+          <PopoverArrow />
+          <PopoverCloseButton />
+          <InputGroup size="md">
+            <Input placeholder="Search" variant="flushed" />
+            <InputRightAddon children={<FaSearch />} background="#AD0F5B" />
+          </InputGroup>
+        </PopoverContent>
+      </Popover>
       <Stack
         direction={{ base: "column", md: "row" }}
         display={{ base: isOpen ? "block" : "none", md: "flex" }}
