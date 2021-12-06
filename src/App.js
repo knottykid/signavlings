@@ -3,7 +3,7 @@ import "./App.css";
 import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
-import ProfileCard from "./components/ProfileList/ProfileCard";
+import SeedlingsList from "./pages/Home/SeedlingsList";
 
 function App() {
 
@@ -22,14 +22,9 @@ function App() {
     <ChakraProvider>
       <div className="App">
         <Navbar />
+        <SeedlingsList people={data}/>
       </div>
-      {data ? (data.map((person)=>{
-        return(
-        <div key ={person.name}>
-          <ProfileCard name={person.name} image={person.photo}/>
-        </div>
-        )
-      })) : null}
+
     </ChakraProvider>
   );
 }
