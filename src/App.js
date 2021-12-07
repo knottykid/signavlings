@@ -24,7 +24,7 @@ function App() {
       <div className="App">
         <Navbar />
         <SeedlingsList people={data}/>
-        <ProfilePopup people={data}/>
+        <ProfilePopup people={data} clickedId={1}/>
       </div>
     </ChakraProvider>
   );

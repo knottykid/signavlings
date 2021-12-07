@@ -9,35 +9,37 @@ import {
     useDisclosure,
     Button,
     Avatar,
-    Wrap
   } from '@chakra-ui/react'
 
-const ProfilePopup = ({people}) => {
-    const person = people[0]
-    const ourPerson = person.map((detail) => console.log(detail))
-    // console.log(ourPerson)
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    return (
-      <React.Fragment>
-        <Button onClick={onOpen}>Open Modal</Button>
-        {/* <Modal isOpen={isOpen} onClose={onClose} >
-          <ModalOverlay />
-          <ModalContent style={{textAlign: 'center', padding: '100px', paddingTop: '20px'}}>
-          <Avatar size='2xl' name={ourPerson.name} src={ourPerson.image} style={{margin: 'auto'}}/>
-            <ModalHeader>{ourPerson.name}</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-             <div>
-                 Location: {ourPerson.location}
-                 Join date: {ourPerson.joinDate}
-                 Bio: {ourPerson.bio}
-             </div>
-            </ModalBody> 
-          
-           </ModalContent>
-        </Modal> */}
-      </React.Fragment>
-    )
+const ProfilePopup = ({people, clickedId}) => {
+
+    return (people.map((person)=>{
+        const { isOpen, onOpen, onClose } = useDisclosure()
+        return (
+        person.profileId === clickedId ?
+            (<React.Fragment>
+                <Button onClick={onOpen}>Open Modal</Button>
+                <Modal isOpen={isOpen} onClose={onClose} >
+                <ModalOverlay />
+                <ModalContent style={{textAlign: 'center', padding: '100px', paddingTop: '20px'}}>
+                <Avatar size='2xl' name={person.name} src={person.photo} style={{margin: 'auto'}}/>
+                    <ModalHeader>{person.name}</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <div>
+                        Location: {person.location}
+                        Join date: {person.joinDate}
+                        Bio: {person.bio}
+                        Role: {person.role}
+                    </div>
+                    </ModalBody> 
+                
+                </ModalContent>
+                </Modal>
+            </React.Fragment>) : null
+            )
+        }
+    ))
 }
 
 export default ProfilePopup;
