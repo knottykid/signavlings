@@ -8,9 +8,7 @@ function SeedlingsList({ people, searchInput, filteredResults }) {
   console.log({ filteredResults });
   return (
     <Container maxW="container.xl">
-      <SimpleGrid columns={4} display={{ md: "flex" }} spacing={10}>
-        {/* //{people.filter(person => person.toLowerCase().includes(searchInput.toLowerCase())).map((filtered, key) => (<div key={key}>{filtered}{' '}</div>))} */}
-
+      <SimpleGrid minChildWidth="250px" spacingX={5} spacingY={10}>
         {searchInput.length > 1
           ? filteredResults.map((filter) => {
               console.log("ZU", filter.name);
