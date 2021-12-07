@@ -4,6 +4,7 @@ import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
 import SeedlingsList from "./pages/Home/SeedlingsList";
+import ProfilePopup from "./components/profilePopup/ProfilePopup";
 
 function App() {
 
@@ -23,8 +24,8 @@ function App() {
       <div className="App">
         <Navbar />
         <SeedlingsList people={data}/>
+        <ProfilePopup people={data}/>
       </div>
-
     </ChakraProvider>
   );
 }
