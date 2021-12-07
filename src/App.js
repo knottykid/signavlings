@@ -22,7 +22,6 @@ function App() {
     setSearchInput(searchValue);
     if (searchInput !== "") {
       const filteredData = data.filter((item) => {
-        // console.log("<<", item);
         return Object.values(item)
           .join("")
           .toLowerCase()
