@@ -9,18 +9,22 @@ import Navbar from '../../components/navbar/Navbar';
 
 function SeedlingsList({people}) {
     return (
-        <Container maxW='container.xl'>
+
+        <div>
           <Navbar/>
-            <SimpleGrid minChildWidth='250px' spacingX={5} spacingY={10} >            
-             {people ? (people.map((person)=>{
-        return(
-        <div key={person.name}>
-          <ProfileCard name={person.name} image={person.photo}/>
-        </div>
+          <Container maxW='container.xl'>
+          <SimpleGrid minChildWidth='250px' spacingX={5} spacingY={10} >            
+               {people ? (people.map((person)=>{
+          return(
+          <div key={person.name}>
+           <ProfileCard name={person.name} image={person.photo}/>
+         </div>
+
         )
       })) : null}
-       </SimpleGrid>
-       </Container>
+        </SimpleGrid>
+        </Container>
+       </div>
         
     )
 }
