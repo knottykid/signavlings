@@ -63,8 +63,18 @@ const Navbar = (props) => {
           <PopoverArrow />
           <PopoverCloseButton />
           <InputGroup size="md">
-            <Input placeholder="Search" variant="flushed" />
-            <InputRightAddon children={<FaSearch />} background="#AD0F5B" />
+            <Input
+              placeholder="Search..."
+              value={props.searchInput}
+              onChange={props.onChange}
+              text={text}
+              color={text == "light" ? "white" : "black"}
+            />
+            <InputRightAddon
+              children={<FaSearch />}
+              background="#AD0F5B"
+              onClick={handleToggle}
+            />
           </InputGroup>
         </PopoverContent>
       </Popover>
