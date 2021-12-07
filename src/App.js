@@ -3,7 +3,13 @@ import "./App.css";
 import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home/Home";
 import SeedlingsList from "./pages/Home/SeedlingsList";
+import {
+  Routes , 
+  Route
+} from 'react-router-dom';
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,7 +19,7 @@ function App() {
   useEffect(async () => {
     const response = await axios({
       method: "get",
-      url: "https://2b5b7952-d207-4316-bd73-20b489332208.mock.pstmn.io/api/profile",
+      url: "http://koalabackend-env.eba-smjwzbzf.eu-central-1.elasticbeanstalk.com/api/profile",
     });
     setData(response.data);
   }, []);
@@ -36,6 +42,7 @@ function App() {
   const onChange = (e) => searchItems(e.target.value);
 
   return (
+   
     <ChakraProvider>
       <div className="App">
         <Navbar
@@ -44,14 +51,23 @@ function App() {
           searchInput={searchInput}
           filteredResults={filteredResults}
         />
-        <SeedlingsList
-          people={data}
-          searchInput={searchInput}
-          filteredResults={filteredResults}
-        />
+      
       </div>
+        <div className="App">
+      
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/list" element={<SeedlingsList people={data}/>} searchInput={searchInput}
+          filteredResults={filteredResults}/>
+          </Routes>
+
+        </div>
     </ChakraProvider>
+   
+    
   );
+  
+
 }
 
 export default App;

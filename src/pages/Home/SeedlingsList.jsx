@@ -2,15 +2,6 @@ import React from "react";
 import ProfileCard from "../../components/ProfileList/ProfileCard";
 import { SimpleGrid, Container } from "@chakra-ui/react";
 import Style from "./style.css";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
-
-const breakpoints = createBreakpoints({
-  sm: "30em",
-  md: "48em",
-  lg: "62em",
-  xl: "80em",
-  "2xl": "96em",
-});
 
 function SeedlingsList({ people, searchInput, filteredResults }) {
   console.log({ searchInput });
