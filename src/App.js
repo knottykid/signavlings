@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Home from "./pages/Home/Home";
 import SeedlingsList from "./pages/Home/SeedlingsList";
 import { Routes, Route } from "react-router-dom";
+import Navbar from '../src/components/navbar/Navbar'
 
 function App() {
   const [data, setData] = useState([]);
