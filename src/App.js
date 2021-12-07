@@ -1,23 +1,30 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
+import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
-import ProfileCard from "./components/ProfileList/ProfileCard";
+import SeedlingsList from "./pages/Home/SeedlingsList";
 
 function App() {
+
+  const [ data, setData] = useState([])
+
+  useEffect ( async ()=>{
+    const response = await axios({
+      method: 'get',
+      url: 'https://2b5b7952-d207-4316-bd73-20b489332208.mock.pstmn.io/api/profile',
+    })
+    setData(response.data)
+  }, []
+  )
+
   return (
     <ChakraProvider>
       <div className="App">
         <Navbar />
-        <h1>Koalas</h1>
+        <SeedlingsList people={data}/>
       </div>
-      <ProfileCard
-        name={"Koala"}
-        image={
-          "https://images.unsplash.com/photo-1606856140824-925bdd3f6681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        }
-        onClickCard={() => console.log("clicked")}
-      />
+
     </ChakraProvider>
   );
 }
