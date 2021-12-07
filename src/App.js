@@ -18,7 +18,7 @@ function App() {
   useEffect ( async ()=>{
     const response = await axios({
       method: 'get',
-      url: 'https://2b5b7952-d207-4316-bd73-20b489332208.mock.pstmn.io/api/profile',
+      url: 'http://koalabackend-env.eba-smjwzbzf.eu-central-1.elasticbeanstalk.com/api/profile',
     })
     setData(response.data)
   }, []
@@ -27,7 +27,6 @@ function App() {
   return (
    
     <ChakraProvider>
-      
         <div className="App">
       
           <Routes>
@@ -36,8 +35,6 @@ function App() {
           </Routes>
 
         </div>
-      
-       
     </ChakraProvider>
    
     
