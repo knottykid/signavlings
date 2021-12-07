@@ -3,7 +3,13 @@ import "./App.css";
 import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home/Home";
 import SeedlingsList from "./pages/Home/SeedlingsList";
+import {
+  Routes , 
+  Route
+} from 'react-router-dom';
+
 
 function App() {
 
@@ -19,13 +25,22 @@ function App() {
   )
 
   return (
+   
     <ChakraProvider>
-      <div className="App">
-        <Navbar />
-        <SeedlingsList people={data}/>
-      </div>
+        <div className="App">
+      
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/list" element={<SeedlingsList people={data}/>} />
+          </Routes>
+
+        </div>
     </ChakraProvider>
+   
+    
   );
+  
+
 }
 
 export default App;
