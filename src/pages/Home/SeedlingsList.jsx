@@ -2,6 +2,7 @@ import React from 'react';
 import ProfileCard from '../../components/ProfileList/ProfileCard';
 import { SimpleGrid, Container} from '@chakra-ui/react';
 import Style from './style.css'
+import Navbar from '../../components/navbar/Navbar';
 
 
 
@@ -9,6 +10,7 @@ import Style from './style.css'
 function SeedlingsList({people}) {
     return (
         <Container maxW='container.xl'>
+          <Navbar/>
             <SimpleGrid minChildWidth='250px' spacingX={5} spacingY={10} >            
              {people ? (people.map((person)=>{
         return(
