@@ -9,6 +9,7 @@ import Navbar from '../../components/navbar/Navbar';
 
 function SeedlingsList({people}) {
     return (
+
         <div>
           <Navbar/>
           <Container maxW='container.xl'>
@@ -18,6 +19,7 @@ function SeedlingsList({people}) {
           <div key={person.name}>
            <ProfileCard name={person.name} image={person.photo}/>
          </div>
+
         )
       })) : null}
         </SimpleGrid>
