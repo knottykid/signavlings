@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
-import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home/Home";
 import SeedlingsList from "./pages/Home/SeedlingsList";
 import { Routes, Route } from "react-router-dom";

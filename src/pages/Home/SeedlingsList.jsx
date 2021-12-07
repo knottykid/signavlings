@@ -6,6 +6,7 @@ import Style from "./style.css";
 function SeedlingsList({ people, searchInput, filteredResults }) {
   console.log({ searchInput });
   console.log({ filteredResults });
+  
   return (
     <Container maxW="container.xl">
       <SimpleGrid minChildWidth="250px" spacingX={5} spacingY={10}>
