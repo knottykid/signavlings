@@ -1,3 +1,4 @@
+
 import React from "react";
 import ProfileCard from "../../components/ProfileList/ProfileCard";
 import { SimpleGrid, Container } from "@chakra-ui/react";

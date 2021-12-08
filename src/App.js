@@ -2,10 +2,20 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home/Home";
+import SeedlingsList from "./pages/Home/SeedlingsList";
+import {
+  Routes , 
+  Route
+} from 'react-router-dom';
+
+
 import Home from "./pages/Home/Home";
 import SeedlingsList from "./pages/Home/SeedlingsList";
 import { Routes, Route } from "react-router-dom";
 import Navbar from '../src/components/navbar/Navbar'
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -38,7 +48,10 @@ function App() {
   const onChange = (e) => searchItems(e.target.value);
 
   return (
+   
     <ChakraProvider>
+
+    
       <div className="App">
         <Navbar
           data={data}
@@ -61,8 +74,13 @@ function App() {
           />
         </Routes>
       </div>
+
     </ChakraProvider>
+   
+    
   );
+  
+
 }
 
 export default App;
