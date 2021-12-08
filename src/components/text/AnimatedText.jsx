@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import './TextAnimation.css';
 
 const Wrapper = (props) => {
   return <span className="word-wrapper">{props.children}</span>;
@@ -16,15 +17,13 @@ const AnimatedText = (props) => {
   const item = {
     hidden: {
       y: "200%",
-      fontSize: "100px",
       color: "#FFFFFF",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.55 }
     },
     visible: {
       y: 0,
-      fontSize: "40px",
       color: "#FFFFFF",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 }
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.45 }
     }
   };
 
