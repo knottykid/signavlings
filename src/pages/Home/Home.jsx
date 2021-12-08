@@ -11,9 +11,14 @@ function Home () {
             <Flex
                 w={'full'}
                 h={'100vh'}
-                backgroundImage={
-                    'url(https://cdn.signavio.com/uploads/2019/07/signavio-info-rectangle.jpg)'
-                }
+                // backgroundImage={
+                //     'url(https://cdn.signavio.com/uploads/2019/07/signavio-info-rectangle.jpg)'
+                // }
+                bgGradient={[
+                  'linear(to-tr, pink,300, teal.300, green.200)',
+                  'linear(to-t, blue.200, teal.500)',
+                  'linear(to-b, pink.500, purple.300, teal.300)',
+                ]}
                 backgroundSize={'cover'}
                 backgroundPosition={'center center'}>
 
@@ -32,24 +37,17 @@ function Home () {
                 Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
                 eiusmod tempor
               </Text>
-              <Stack direction={'row'}>
+              <Stack direction='row' >
                 <Button
                   bg={'blue.400'}
                   rounded={'full'}
                   color={'white'}
                   _hover={{ bg: 'blue.500' }}>
-                  View all seedlings
-                </Button>
-                <Button
-                  bg={'whiteAlpha.300'}
-                  rounded={'full'}
-                  color={'white'}
-                  _hover={{ bg: 'whiteAlpha.500' }}>
-                  Show me more
+                    View all seedlings
                 </Button>
               </Stack>
             </Stack>
-          </VStack>
+            </VStack>
         </Flex>
         );
 
