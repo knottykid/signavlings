@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
   Box,
   Stack,
@@ -22,14 +22,14 @@ import {
 import { FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 const Navbar = (props) => {
-  console.log("Home", props);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleToggle = () => (isOpen ? onClose() : onOpen());
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const pathname = window.location.pathname;
+  const location = useLocation();
+
   return (
     <Flex
       as="nav"
@@ -57,7 +57,7 @@ const Navbar = (props) => {
           <Img src="images/Signavio_Logo_Claim_RGB.png" />
         </Box>
       </Flex>
-      {pathname === "/list" ? (
+      {location.pathname === "/list" ? (
         <Popover>
           <PopoverTrigger>
             <IconButton icon={<FaSearch />} background="#AD0F5B" />
@@ -65,13 +65,13 @@ const Navbar = (props) => {
           <PopoverContent>
             <PopoverArrow />
             <PopoverCloseButton />
-            <InputGroup size="md">
+            <InputGroup size="sm">
               <Input
-                placeholder="Search..."
+                placeholder="Search by Name, Location or Month"
                 value={props.searchInput}
                 onChange={props.onChange}
                 text={text}
-                color={text == "light" ? "white" : "black"}
+                color={text === "light" ? "white" : "black"}
               />
               <InputRightAddon
                 children={<FaSearch />}
@@ -95,14 +95,12 @@ const Navbar = (props) => {
         display={{ base: isOpen ? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
-        {/* <Link to="/list"> */}
         <Button
           variant="outline"
           _hover={{ bg: "teal.700", borderColor: "#AD0F5B" }}
         >
           Seednavio
         </Button>
-        {/* </Link> */}
       </Box>
     </Flex>
   );
