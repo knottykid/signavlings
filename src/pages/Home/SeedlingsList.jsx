@@ -1,6 +1,6 @@
 import React from 'react'
-import ProfileCard from '../../components/ProfileList/ProfileCard'
 import { SimpleGrid, Container} from '@chakra-ui/react'
+import ProfilePopup from '../../components/profilePopup/ProfilePopup'
 
 
 function SeedlingsList({people}) {
@@ -10,8 +10,8 @@ function SeedlingsList({people}) {
             <SimpleGrid minChildWidth='250px' spacingX={5} spacingY={10} >            
              {people ? (people.map((person, i)=>{
               return(
-                <div key ={`${i}${person.name}`}>
-                  <ProfileCard name={person.name} image={person.photo}/>
+                <div key={`${i}${person.name}`} >
+                  <ProfilePopup person={person} />
                 </div>
                 )
               })) : null}
