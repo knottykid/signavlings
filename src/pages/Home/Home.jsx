@@ -40,7 +40,8 @@ function Home () {
               </Text> */}
               <TextAnimation/>
               <Stack direction='row' >
-              <Box
+
+              <Box className="btn-font"
                 as='button'
                 height='50px'
                 width='200px'
@@ -66,7 +67,9 @@ function Home () {
                     '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
                 }}
               >
-                <a href="/list"> View all seedlings</a>
+
+                <a href="/list"> VIEW SEEDLINGS</a>
+
               </Box>
               </Stack>
             </VStack>
