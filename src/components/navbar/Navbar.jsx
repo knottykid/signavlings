@@ -24,9 +24,11 @@ const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleToggle = () => (isOpen ? onClose() : onOpen());
-  const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+  // const { toggleColorMode } = useColorMode();
+  // const text = useColorModeValue("dark", "light");
+  // const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+
+console.log(props)
 
   return (
     <Flex
@@ -42,11 +44,11 @@ const Navbar = (props) => {
       <IconButton
         size="md"
         fontSize="lg"
-        aria-label={`Switch to ${text} mode`}
+        aria-label={`Switch to ${props.mode} mode`}
         variant="ghost"
         color="current"
         marginLeft="2"
-        onClick={toggleColorMode}
+        onClick={props.toggleColorMode}
         icon={<SwitchIcon />}
         {...props}
       />
@@ -67,8 +69,8 @@ const Navbar = (props) => {
               placeholder="Search..."
               value={props.searchInput}
               onChange={props.onChange}
-              text={text}
-              color={text == "light" ? "white" : "black"}
+              text={props.mode}
+              color={props.mode == "light" ? "white" : "black"}
             />
             <InputRightAddon
               children={<FaSearch />}
