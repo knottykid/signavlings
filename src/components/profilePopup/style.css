@@ -1,0 +1,28 @@
+.bold {
+    font-weight:500;
+}
+
+.bold-name {
+    font-weight: bold!important;
+    font-size: 25px!important;
+    
+}
+
+.avatar-style {
+    margin:auto;
+    
+}
+
+.avatar-bkg {
+ 
+    background-color: 'black';
+    padding-top: '20px';
+    margin-top: '-20px';
+    border-radius: '6px';
+    padding-bottom: '20px';
+
+}
+
+.modal-bkg {
+ 
+}

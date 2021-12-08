@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 import ProfileCard from '../ProfileList/ProfileCard'
 import {
     Modal,
@@ -30,27 +31,29 @@ const ProfilePopup = ({ person }) => {
                 <ProfileCard name={person.name} image={person.photo} onClickCard={onOpen}/>
                 <Modal isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay />
-                <ModalContent style={{textAlign: 'center', padding: '100px', paddingTop: '20px'}}>
-                <Avatar size='2xl' name={person.name} src={person.photo} style={{margin: 'auto'}}/>
-                    <ModalHeader>{person.name}</ModalHeader>
+                <ModalContent className="modal-bkg">
+                <div className="avatar-bkg">
+                <Avatar className="avatar-style" size='2xl' name={person.name} src={person.photo} />
+                </div>
+                    <ModalHeader className="bold-name">{person.name}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                    <Table variant='striped' colorScheme={theme.colors.purpleSig}>    
-                      <Tbody>
+                    <Table variant='striped' >    
+                      <Tbody width="100%">
                         <Tr>
-                          <Td>Location:</Td>
+                          <Td className="bold">Location:</Td>
                           <Td>{person.location}</Td>  
                         </Tr>
                         <Tr>
-                          <Td>Join Date: </Td>
+                          <Td className="bold">Join Date: </Td>
                           <Td>{person.joinDate}</Td>
                         </Tr>
                         <Tr>
-                          <Td>Role</Td>
+                          <Td className="bold">Role:</Td>
                           <Td>{person.role}</Td>
                         </Tr>
                         <Tr>
-                          <Td>Bio</Td>
+                          <Td className="bold">Bio:</Td>
                           <Td>{person.bio}</Td>
                         </Tr>
                       </Tbody>                  
