@@ -42,9 +42,6 @@ function Home () {
               <Stack direction='row' >
 
               <Box className="btn-font"
-
-              <Box
-
                 as='button'
                 height='50px'
                 width='200px'
