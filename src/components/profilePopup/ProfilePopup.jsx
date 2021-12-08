@@ -31,14 +31,14 @@ const ProfilePopup = ({ person }) => {
                 <ProfileCard name={person.name} image={person.photo} onClickCard={onOpen}/>
                 <Modal isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay />
-                <ModalContent className="modal-bkg">
+                <ModalContent className='modalContent' >
                 <div className="avatar-bkg">
-                <Avatar className="avatar-style" size='2xl' name={person.name} src={person.photo} />
+                  <Avatar className="avatar-style" size='2xl' name={person.name} src={person.photo} />
                 </div>
                     <ModalHeader className="bold-name">{person.name}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                    <Table variant='striped' >    
+                    <Table >    
                       <Tbody width="100%">
                         <Tr>
                           <Td className="bold">Location:</Td>
@@ -46,7 +46,7 @@ const ProfilePopup = ({ person }) => {
                         </Tr>
                         <Tr>
                           <Td className="bold">Join Date: </Td>
-                          <Td>{person.joinDate}</Td>
+                          <Td>{person.joiningMonth}</Td>
                         </Tr>
                         <Tr>
                           <Td className="bold">Role:</Td>

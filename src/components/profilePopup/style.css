@@ -9,20 +9,18 @@
 }
 
 .avatar-style {
-    margin:auto;
-    
+    margin: auto;
+    border: solid 6px white;
 }
 
 .avatar-bkg {
- 
-    background-color: 'black';
-    padding-top: '20px';
-    margin-top: '-20px';
-    border-radius: '6px';
-    padding-bottom: '20px';
-
+    background-color: rgba(173, 15, 91, 0.12);
+    padding-top: 60px;
+    margin-top: -20px;
+    border-radius: 6px;
+    padding-bottom: 20px;
 }
 
-.modal-bkg {
- 
+.modalContent {
+    text-align: center;
 }
