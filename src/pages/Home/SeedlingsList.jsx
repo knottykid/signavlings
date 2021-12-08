@@ -4,7 +4,7 @@ import { SimpleGrid, Container } from "@chakra-ui/react";
 
 function SeedlingsList({ people, searchInput, filteredResults }) {
   return (
-    <Container maxW="container.xl">
+    <Container maxW="container.xl" className='seedlingsListContainer'>
       <SimpleGrid minChildWidth="250px" spacingX={5} spacingY={10}>
         {searchInput.length > 1
           ? filteredResults.map((filter) => {

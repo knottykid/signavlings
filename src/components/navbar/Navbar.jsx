@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import {
   Box,
   Stack,
@@ -41,6 +41,7 @@ const Navbar = (props) => {
       color="white"
       {...props}
     >
+    { location.pathname === '/list' &&
       <IconButton
         size="md"
         fontSize="lg"
@@ -52,9 +53,12 @@ const Navbar = (props) => {
         icon={<SwitchIcon />}
         {...props}
       />
+    }
       <Flex align="center" mr={5}>
         <Box w={100}>
-          <Img src="images/Signavio_Logo_Claim_RGB.png" />
+        <Link to="/">
+          <Img src="images/Signavio_Logo_Claim_RGB.png" /> 
+        </Link>
         </Box>
       </Flex>
       {location.pathname === "/list" ? (
