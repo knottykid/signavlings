@@ -28,4 +28,9 @@
 
 .modalContent {
     text-align: center;
+    height: 60vh;
+}
+
+.chakra-modal__content-container {
+    opacity: 0.95;
 }
