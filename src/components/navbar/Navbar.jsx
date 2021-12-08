@@ -23,8 +23,8 @@ import { FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const handleToggle = () => (isOpen ? onClose() : onOpen());
+
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);

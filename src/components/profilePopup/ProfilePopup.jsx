@@ -27,9 +27,10 @@ const ProfilePopup = ({ person }) => {
           }
 
         return (
-            (<React.Fragment>
-                <ProfileCard name={person.name} image={person.photo} onClickCard={onOpen}/>
-                <Modal isOpen={isOpen} onClose={onClose} >
+            (
+            <React.Fragment>
+                <ProfileCard name={person.name} image={person.photo} onClickCard={onOpen} />
+                <Modal isOpen={isOpen} onClose={onClose} isCentered={true} size='xl'>
                 <ModalOverlay />
                 <ModalContent className='modalContent' >
                 <div className="avatar-bkg">

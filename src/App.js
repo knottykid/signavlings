@@ -47,7 +47,6 @@ function App() {
           filteredResults={filteredResults}
           list={"/list"}
         />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

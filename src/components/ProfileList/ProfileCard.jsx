@@ -11,7 +11,7 @@ import {
 
 function ProfileCard({name, image, onClickCard}) {
     return (
-          <Center py={6} onClick={ onClickCard } data-testid='profileCard'>
+          <Center  onClick={ onClickCard } data-testid='profileCard'>
             <Box
               maxW={'270px'}
               w={'full'}
