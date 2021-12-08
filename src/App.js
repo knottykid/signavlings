@@ -8,6 +8,7 @@ import SeedlingsList from "./pages/Home/SeedlingsList";
 import { Routes, Route } from "react-router-dom";
 
 
+
 function App() {
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -41,8 +42,6 @@ function App() {
   return (
    
     <ChakraProvider>
-
-    
       <div className="App">
         <Navbar
           data={data}
@@ -50,7 +49,6 @@ function App() {
           searchInput={searchInput}
           filteredResults={filteredResults}
         />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -65,13 +63,8 @@ function App() {
           />
         </Routes>
       </div>
-
     </ChakraProvider>
-   
-    
   );
-  
-
 }
 
 export default App;
