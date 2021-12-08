@@ -2,3 +2,7 @@
     background: black;
     color: white;
 }
+
+.chakra-ui-dark .card-bg-color{
+    background: #843d61;;
+}

@@ -6,20 +6,13 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home/Home";
 import SeedlingsList from "./pages/Home/SeedlingsList";
 import { Routes, Route } from "react-router-dom";
-import {
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
+
 
 
 function App() {
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
-
-  const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   useEffect(async () => {
     const response = await axios({
@@ -55,9 +48,6 @@ function App() {
           onChange={onChange}
           searchInput={searchInput}
           filteredResults={filteredResults}
-          mode={text}
-          toggleColorMode={toggleColorMode}
-          switchIcon={SwitchIcon}
         />
         <Routes>
           <Route path="/" element={<Home />} />

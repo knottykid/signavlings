@@ -22,13 +22,11 @@ import { FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const handleToggle = () => (isOpen ? onClose() : onOpen());
-  // const { toggleColorMode } = useColorMode();
-  // const text = useColorModeValue("dark", "light");
-  // const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
-console.log(props)
+  const { toggleColorMode } = useColorMode();
+  const text = useColorModeValue("dark", "light");
+  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   return (
     <Flex
@@ -44,11 +42,11 @@ console.log(props)
       <IconButton
         size="md"
         fontSize="lg"
-        aria-label={`Switch to ${props.mode} mode`}
+        aria-label={`Switch to ${text} mode`}
         variant="ghost"
         color="current"
         marginLeft="2"
-        onClick={props.toggleColorMode}
+        onClick={toggleColorMode}
         icon={<SwitchIcon />}
         {...props}
       />
@@ -69,8 +67,8 @@ console.log(props)
               placeholder="Search..."
               value={props.searchInput}
               onChange={props.onChange}
-              text={props.mode}
-              color={props.mode == "light" ? "white" : "black"}
+              text={text}
+              color={text == "light" ? "white" : "black"}
             />
             <InputRightAddon
               children={<FaSearch />}
