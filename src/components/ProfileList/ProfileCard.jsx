@@ -11,7 +11,7 @@ import {
 
 function ProfileCard({name, image, onClickCard}) {
     return (
-          <Center py={6} onClick={ onClickCard } data-testid='profileCard'>
+          <Center  onClick={ onClickCard } data-testid='profileCard'>
             <Box
               maxW={'270px'}
               w={'full'}
@@ -23,7 +23,7 @@ function ProfileCard({name, image, onClickCard}) {
                 h={'200px'}
                 w={'full'}
                 src={
-                    image
+                    image || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReBoB3uhPYwy6Vtp1PelM5Zyf8Ov5U98DANA&usqp=CAU'
                 }
                 alt='profilePic'
                 objectFit={'cover'}
