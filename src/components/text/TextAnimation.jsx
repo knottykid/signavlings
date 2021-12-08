@@ -6,10 +6,12 @@ import "./TextAnimation.css";
 export default function TextAnimation() {
   const [replay, setReplay] = useState(true);
   const placeholderText = [
+
     { type: "heading1", text: "Welcome to SIGNAVIO"  },
     {
       type: "heading2",
       text: "Connect with your new team members here"
+
     }
   ];
 

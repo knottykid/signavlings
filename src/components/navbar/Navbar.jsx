@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import {
   Box,
   Stack,
@@ -22,11 +23,12 @@ import { FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const handleToggle = () => (isOpen ? onClose() : onOpen());
+
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+  const location = useLocation();
 
   return (
     <Flex
@@ -55,29 +57,31 @@ const Navbar = (props) => {
           <Img src="images/Signavio_Logo_Claim_RGB.png" />
         </Box>
       </Flex>
-      <Popover>
-        <PopoverTrigger>
-          <IconButton icon={<FaSearch />} background="#AD0F5B" />
-        </PopoverTrigger>
-        <PopoverContent>
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <InputGroup size="md">
-            <Input
-              placeholder="Search..."
-              value={props.searchInput}
-              onChange={props.onChange}
-              text={text}
-              color={text == "light" ? "white" : "black"}
-            />
-            <InputRightAddon
-              children={<FaSearch />}
-              background="#AD0F5B"
-              onClick={handleToggle}
-            />
-          </InputGroup>
-        </PopoverContent>
-      </Popover>
+      {location.pathname === "/list" ? (
+        <Popover>
+          <PopoverTrigger>
+            <IconButton icon={<FaSearch />} background="#AD0F5B" />
+          </PopoverTrigger>
+          <PopoverContent>
+            <PopoverArrow />
+            <PopoverCloseButton />
+            <InputGroup size="sm">
+              <Input
+                placeholder="Search by Name, Location or Month"
+                value={props.searchInput}
+                onChange={props.onChange}
+                text={text}
+                color={text === "light" ? "white" : "black"}
+              />
+              <InputRightAddon
+                children={<FaSearch />}
+                background="#AD0F5B"
+                onClick={handleToggle}
+              />
+            </InputGroup>
+          </PopoverContent>
+        </Popover>
+      ) : null}
       <Stack
         direction={{ base: "column", md: "row" }}
         display={{ base: isOpen ? "block" : "none", md: "flex" }}

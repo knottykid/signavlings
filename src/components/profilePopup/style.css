@@ -14,13 +14,23 @@
 }
 
 .avatar-bkg {
-    background-color: rgba(173, 15, 91, 0.12);
+    background-color:  #e9d8e1;
     padding-top: 60px;
     margin-top: -20px;
     border-radius: 6px;
     padding-bottom: 20px;
 }
 
+.chakra-ui-dark .avatar-bkg{
+    background: #843d61;;
+    color: black;
+}
+
 .modalContent {
     text-align: center;
+    height: 60vh;
+}
+
+.chakra-modal__content-container {
+    opacity: 0.95;
 }

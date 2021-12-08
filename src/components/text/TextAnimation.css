@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Raleway:wght@100&family=Titillium+Web:wght@300&display=swap');
+
 html,
 body {
   padding: 0;
@@ -22,6 +24,7 @@ body {
 } */
 
 h1 {
+
   font-size: 60px !important;
   font-weight: 1000;
   line-height: 1;
@@ -31,12 +34,16 @@ h1 {
 
 h2 {
   font-size: 30px !important;
-  font-weight: 400;
+
+  font-size: 80px;
+  font-weight: 1000;
   line-height: 2;
   opacity: 0.75;
-  margin: 0;
+  margin: 0 0 20px;
   font-family: 'Titillium Web', sans-serif;
 }
+
+
 
 .word-wrapper {
   white-space: nowrap;
