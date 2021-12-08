@@ -1,8 +1,7 @@
 
 import React from "react";
-import ProfileCard from "../../components/ProfileList/ProfileCard";
+import ProfilePopup from "../../components/profilePopup/ProfilePopup";
 import { SimpleGrid, Container } from "@chakra-ui/react";
-import Style from "./style.css";
 
 function SeedlingsList({ people, searchInput, filteredResults }) {
   console.log({ searchInput });
@@ -23,7 +22,7 @@ function SeedlingsList({ people, searchInput, filteredResults }) {
           : people.map((person) => {
               return (
                 <div key={person.name}>
-                  <ProfileCard name={person.name} image={person.photo} />
+                <ProfilePopup person={person} />
                 </div>
               );
             })}
