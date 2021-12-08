@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Button, Image, Stack, VStack, Box, Flex, Containe, useBreakpointValue, Text} from '@chakra-ui/react';
 import "./style.css";
 
@@ -6,6 +7,7 @@ import "./style.css";
 function Home () {
 
           return (
+
             <Flex
                 w={'full'}
                 h={'100vh'}
@@ -50,6 +52,9 @@ function Home () {
           </VStack>
         </Flex>
         );
-    
+
+
+       
+
 }
 export default Home;

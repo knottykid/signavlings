@@ -1,28 +1,35 @@
-import React from 'react';
-import ProfileCard from '../../components/ProfileList/ProfileCard';
-import { SimpleGrid, Container} from '@chakra-ui/react';
-import Style from './style.css'
 
+import React from "react";
+import ProfileCard from "../../components/ProfileList/ProfileCard";
+import { SimpleGrid, Container } from "@chakra-ui/react";
+import Style from "./style.css";
 
-
-
-function SeedlingsList({people}) {
-    return (
-
-        <Container maxW='container.xl'>
-            <SimpleGrid minChildWidth='250px' spacingX={5} spacingY={10} >            
-             {people ? (people.map((person)=>{
-        return(
-        <div key={person.name}>
-          <ProfileCard name={person.name} image={person.photo}/>
-        </div>
-        )
-      })) : null}
-       </SimpleGrid>
-       </Container>
-        
-    )
+function SeedlingsList({ people, searchInput, filteredResults }) {
+  console.log({ searchInput });
+  console.log({ filteredResults });
+  
+  return (
+    <Container maxW="container.xl">
+      <SimpleGrid minChildWidth="250px" spacingX={5} spacingY={10}>
+        {searchInput.length > 1
+          ? filteredResults.map((filter) => {
+              console.log("ZU", filter.name);
+              return (
+                <div key={filter.name}>
+                  <h1>{filter.name}</h1>
+                </div>
+              );
+            })
+          : people.map((person) => {
+              return (
+                <div key={person.name}>
+                  <ProfileCard name={person.name} image={person.photo} />
+                </div>
+              );
+            })}
+      </SimpleGrid>
+    </Container>
+  );
 }
 
-export default SeedlingsList
-
+export default SeedlingsList;
