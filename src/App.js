@@ -45,6 +45,8 @@ function App() {
           onChange={onChange}
           searchInput={searchInput}
           filteredResults={filteredResults}
+          home={<Home />}
+          list={"/list"}
         />
 
         <Routes>
