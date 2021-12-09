@@ -7,3 +7,7 @@
     background: #843d61;;
 
 }
+
+.cursor-card:hover{
+    cursor: pointer;
+}
