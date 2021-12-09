@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+
 import "./App.css";
 import axios from "axios";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home/Home";
-import SeedlingsList from "./pages/Home/SeedlingsList";
+import SeedlingsList from "./pages/SeedlingsList/SeedlingsList";
 import { Routes, Route } from "react-router-dom";
+import * as CONST from "./utils/const";
+import * as PATH from "./utils/path";
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,10 +16,7 @@ function App() {
   const [filteredResults, setFilteredResults] = useState([]);
 
   useEffect(async () => {
-    const response = await axios({
-      method: "get",
-      url: "http://koalabackend-env.eba-smjwzbzf.eu-central-1.elasticbeanstalk.com/api/profile",
-    });
+    const response = await axios.get(CONST.SERVER_URL);
     setData(response.data);
   }, []);
 
@@ -45,12 +45,12 @@ function App() {
           onChange={onChange}
           searchInput={searchInput}
           filteredResults={filteredResults}
-          list={"/list"}
+          list={PATH.SEEDLIST}
         />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path={PATH.HOMEPAGE} element={<Home />} />
           <Route
-            path="/list"
+            path={PATH.SEEDLIST}
             element={
               <SeedlingsList
                 people={data}
