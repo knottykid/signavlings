@@ -39,6 +39,7 @@ describe('testing profilePopup component', ()=> {
     fireEvent.click(card);
     const closeModalButton = screen.getByRole('button', {name: 'Close'})
     fireEvent.click(closeModalButton);
-    // expect(screen.queryByTestId('modal')).toBeFalsy()
+    // expect(screen.queryByTestId('modal')).toBeFalsy() 
+    //why it doesnt work uuuugh!!!
   })
 })
