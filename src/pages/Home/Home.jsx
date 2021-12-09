@@ -1,21 +1,17 @@
 import React from "react";
-
-import { Button, Image, Stack, VStack, Box, Flex, Containe, useBreakpointValue, Text} from '@chakra-ui/react';
+import { Stack, VStack, Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import "./style.css";
-import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
+
 import TextAnimation from '../../components/text/TextAnimation';
 
 
-function Home () {
+function Home ({onClickButton}) {
 
           return (
 
-            <Flex
+            <Flex  onClick={ onClickButton} data-testid='homeText'
                 w={'full'}
                 h={'100vh'}
-                // backgroundImage={
-                //     'url(https://cdn.signavio.com/uploads/2019/07/signavio-info-rectangle.jpg)'
-                // }
                 bgGradient={[
                   'linear(to-tr, pink,300, teal.300, green.200)',
                   'linear(to-t, blue.200, teal.500)',
@@ -30,18 +26,11 @@ function Home () {
             justify={'center'}
             px={useBreakpointValue({ base: 4, md: 8 })}
             bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-              {/* <Text
-                color={'white'}
-                fontWeight={700}
-                lineHeight={1.2}
-                fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                eiusmod tempor
-              </Text> */}
-              <TextAnimation/>
+              
+              <TextAnimation data-testid='homeText'/>
               <Stack direction='row' >
 
-              <Box className="btn-font"
+              <Box className="btn-font" data-testid='homeButton'
                 as='button'
                 height='50px'
                 width='200px'
@@ -50,7 +39,6 @@ function Home () {
                 border='2px'
                 px='8px'
                 borderRadius='15px'
-                fontSize='14px'
                 fontWeight='semibold'
                 bg='transparent'
                 borderColor='#ccd0d5'
@@ -75,9 +63,5 @@ function Home () {
             </VStack>
         </Flex>
         );
-
-
-       
-
 }
 export default Home;

@@ -4,10 +4,10 @@ import AnimatedText from "./AnimatedText";
 import "./TextAnimation.css";
 
 export default function TextAnimation() {
-  const [replay, setReplay] = useState(true);
+  const [replay] = useState(true);
   const placeholderText = [
 
-    { type: "heading1", text: "Welcome to SIGNAVIO"  },
+    { type: "heading1", text: "Welcome to SIGNAVIO"   },
     {
       type: "heading2",
       text: "Connect with your new team members here"
@@ -23,12 +23,6 @@ export default function TextAnimation() {
     }
   };
 
-  const handleReplay = () => {
-    setReplay(!replay);
-    setTimeout(() => {
-      setReplay(true);
-    }, 600);
-  };
 
   return (
     <motion.div
@@ -42,9 +36,6 @@ export default function TextAnimation() {
           return <AnimatedText {...item} key={index} />;
         })}
       </div>
-      {/* <button onClick={handleReplay}>
-        Replay <span>⟲</span>
-      </button> */}
     </motion.div>
   );
 }
