@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
-import ProfileCard from './components/ProfileList/ProfileCard'
+import ProfileCard from './ProfileCard'
 
 describe('testing profileCard component', ()=> {
   it('name is displayed correctly on profile card', () => {
