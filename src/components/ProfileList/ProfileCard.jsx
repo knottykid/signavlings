@@ -12,7 +12,7 @@ import {
 
 function ProfileCard({ name, image, onClickCard }) {
   return (
-    <Center onClick={onClickCard} data-testid="profileCard">
+    <Center onClick={onClickCard} data-testid="profileCard" className="cursor-card"> 
       <Box
         maxW={"270px"}
         w={"full"}
