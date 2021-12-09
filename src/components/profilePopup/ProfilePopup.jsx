@@ -20,12 +20,6 @@ const ProfilePopup = ({ person }) => {
 
         const { isOpen, onOpen, onClose } = useDisclosure()
 
-        const theme = {
-            colors: {
-              purpleSig: '#fafafa'
-            },
-          }
-
         return (
             (
             <React.Fragment>

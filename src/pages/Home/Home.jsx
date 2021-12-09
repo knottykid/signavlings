@@ -1,8 +1,6 @@
 import React from "react";
-
-import { Button, Image, Stack, VStack, Box, Flex, Containe, useBreakpointValue, Text} from '@chakra-ui/react';
+import { Stack, VStack, Box, Flex, useBreakpointValue, } from '@chakra-ui/react';
 import "./style.css";
-import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
 import TextAnimation from '../../components/text/TextAnimation';
 
 
@@ -30,14 +28,7 @@ function Home () {
             justify={'center'}
             px={useBreakpointValue({ base: 4, md: 8 })}
             bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-              {/* <Text
-                color={'white'}
-                fontWeight={700}
-                lineHeight={1.2}
-                fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                eiusmod tempor
-              </Text> */}
+              
               <TextAnimation/>
               <Stack direction='row' >
 
@@ -50,7 +41,6 @@ function Home () {
                 border='2px'
                 px='8px'
                 borderRadius='15px'
-                fontSize='14px'
                 fontWeight='semibold'
                 bg='transparent'
                 borderColor='#ccd0d5'
