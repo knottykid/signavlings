@@ -1,6 +1,7 @@
 import React from "react";
-import { Stack, VStack, Box, Flex, useBreakpointValue, } from '@chakra-ui/react';
+import { Stack, VStack, Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import "./style.css";
+
 import TextAnimation from '../../components/text/TextAnimation';
 
 
@@ -62,9 +63,5 @@ function Home ({onClickButton}) {
             </VStack>
         </Flex>
         );
-
-
-       
-
 }
 export default Home;
