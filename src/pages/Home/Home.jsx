@@ -4,16 +4,13 @@ import "./style.css";
 import TextAnimation from '../../components/text/TextAnimation';
 
 
-function Home () {
+function Home ({onClickButton}) {
 
           return (
 
-            <Flex
+            <Flex  onClick={ onClickButton} data-testid='homeText'
                 w={'full'}
                 h={'100vh'}
-                // backgroundImage={
-                //     'url(https://cdn.signavio.com/uploads/2019/07/signavio-info-rectangle.jpg)'
-                // }
                 bgGradient={[
                   'linear(to-tr, pink,300, teal.300, green.200)',
                   'linear(to-t, blue.200, teal.500)',
@@ -29,10 +26,10 @@ function Home () {
             px={useBreakpointValue({ base: 4, md: 8 })}
             bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
               
-              <TextAnimation/>
+              <TextAnimation data-testid='homeText'/>
               <Stack direction='row' >
 
-              <Box className="btn-font"
+              <Box className="btn-font" data-testid='homeButton'
                 as='button'
                 height='50px'
                 width='200px'
