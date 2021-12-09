@@ -1,70 +1,99 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of contents
+* [General info](#seedlify-app)
+* [Technologies](#technologies-used)
+* [Stucture](#structure)
+* [Setup](#setup)
+* [Deployment](#deployment)
+* [Contribution](#how-to-contribute)
 
-## Available Scripts
+# Seedlify App
+
+This project is a fullstack single-page React App.
+
+### Overview
+
+![Welcome](public/screenshots/welcome.png)
+This application is a platform where new hires can introduce themselves and connect with their fellow teammates.
+
+### What can a user do ?
+
+* view all new starters
+* view individual profile page
+* search by name, month or location
+
+# Technologies used
+
+* React.JS
+* Jest
+* Chakra UI
+* React router
+* Axios
+
+# Structure
+```
+SIGNAVLINGS
+│   README.md
+│   .gitignore     
+|   package-json
+|   package-lock.json
+|
+└───public
+│   │   images
+│   │   index.html
+|   |   manifest.json
+|   |   robots.txt  
+│   
+└───src
+|   │   components
+|   |   routing
+|   |   utils
+|   |   App.css
+|   |   App.js
+|   |   App.test.js
+|   |   index.css
+|   |   index.js
+|   |   ProfileCard.test.jsx
+|
+└───test
+```
+
+# Technical Description
+
+1. We used the endpoint calling a get request using axios library.
+![Langing Page](public/screenshots/landingPage.png)
+
+2. It sends back a JSON file with all the profiles as an array with all properties.
+![List](public/screenshots/listNormal.png)
+
+3. Using Chakra modal, we were able to create a popup triggered when clicked on one of the list's card.
+
+![Overlay](public/screenshots/overlayNormal.png)
+![Overlay Dark mode](public/screenshots/overlayDarkMode.png)
+
+4. We can filter the list based on a search by name, city or month.
+![Search](public/screenshots/searchCityNormal.png)
+![Search](public/screenshots/searchDarkMode.png)
+
+5. Responsive layout on mobile phone
+![Search](public/screenshots/respIphone.png)
+
+
+# Setup
+
+To run this project, install npm:
+### `npm i`
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `npm test`
+We were unit testing using Jest and React Testing library.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+## Contribution
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
