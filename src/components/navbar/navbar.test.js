@@ -1,20 +1,28 @@
 // import Navbar from "./Navbar";
 import { render } from "@testing-library/react";
+import Navbar from "./Navbar";
 import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 
 // const { getPlatform } = require("");
 // jest.mock("device");
 
 describe("", () => {
   it("should render succesfully", () => {
-    getPlatform.mockImplementation(() => "desktop");
-    jest.isolateModules(() => {
-      const { Navbar } = require("./Navbar");
+    render(
+      <ChakraProvider>
+        <Navbar/>
+      </ChakraProvider>
+    
+    )
+    // getPlatform.mockImplementation(() => "desktop");
+    // jest.isolateModules(() => {
+    //   const { Navbar } = require("./Navbar");
 
-      const { container } = render(<Navbar>test</Navbar>);
+    //   const { container } = render(<Navbar>test</Navbar>);
 
-      expect(container).toMatchSnapshot();
-    });
+    //   expect(container).toMatchSnapshot();
+    // });
   });
 });
 
