@@ -4,8 +4,7 @@
 * [Technologies](#technologies-used)
 * [Stucture](#structure)
 * [Setup](#setup)
-* [Deployment](#deployment)
-* [Contribution](#how-to-contribute)
+* [Contribution](#contribution)
 
 # Seedlify App
 
@@ -67,7 +66,6 @@ SIGNAVLINGS
 ![List](public/screenshots/listNormal.png)
 
 3. Using Chakra modal, we were able to create a popup triggered when clicked on one of the list's card.
-
 ![Overlay](public/screenshots/overlayNormal.png)
 ![Overlay Dark mode](public/screenshots/overlayDarkMode.png)
 
@@ -75,7 +73,7 @@ SIGNAVLINGS
 ![Search](public/screenshots/searchCityNormal.png)
 ![Search](public/screenshots/searchDarkMode.png)
 
-5. Responsive layout on mobile phone
+5. Responsive layout on mobile phone.
 ![Search](public/screenshots/respIphone.png)
 
 
@@ -93,7 +91,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `npm test`
 We were unit testing using Jest and React Testing library.
 
-## Deployment
-
 ## Contribution
+
+**Front-end team:**
+* Zuzanna Tarka: [@tarkazuz](https://github.com/tarkazuz)
+* John Rosario: [@knottykid](https://github.com/knottykid)
+* Cintia Garcia: [@cintiagarcia](https://github.com/cintiagarcia)
+* Mintra Domundee: [@mintradmd](https://github.com/mintradmd)
+* Cécile Eboa: [@yabacici](https://github.com/yabacici)
+
 
