@@ -22,13 +22,13 @@ const ProfilePopup = ({ person }) => {
 
         return (
             (
-            <React.Fragment>
-                <ProfileCard name={person.name} image={person.photo} onClickCard={onOpen} />
+            <div data-testid='popupContainer'>
+                <ProfileCard name={person.name} image={person.photo} onClickCard={onOpen}/>
                 <Modal isOpen={isOpen} onClose={onClose} isCentered={true} size='xl'>
                 <ModalOverlay />
-                <ModalContent className='modalContent' >
+                <ModalContent className='modalContent' data-testid='modal'>
                 <div className="avatar-bkg">
-                  <Avatar className="avatar-style" size='2xl' name={person.name} src={person.photo} />
+                  <Avatar className="avatar-style" size='2xl' name={person.name} src={person.photo} alt='avatarPhoto'/>
                 </div>
                     <ModalHeader className="bold-name">{person.name}</ModalHeader>
                     <ModalCloseButton />
@@ -54,10 +54,9 @@ const ProfilePopup = ({ person }) => {
                       </Tbody>                  
                     </Table>
                     </ModalBody> 
-                
                 </ModalContent>
                 </Modal>
-            </React.Fragment>) 
+            </div>) 
             )
 }
 

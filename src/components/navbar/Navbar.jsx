@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
 import {
   Box,
   Stack,
@@ -28,7 +27,7 @@ const Navbar = (props) => {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const location = useLocation();
+  const location = window.location.href
 
   return (
     <Flex
@@ -41,7 +40,7 @@ const Navbar = (props) => {
       color="white"
       {...props}
     >
-    { location.pathname === '/list' &&
+    { location.includes('/list') &&
       <IconButton
         size="md"
         fontSize="lg"
@@ -56,12 +55,12 @@ const Navbar = (props) => {
     }
       <Flex align="center" mr={5}>
         <Box w={100}>
-        <Link to="/">
+        <a href="/">
           <Img src="images/Signavio_Logo_Claim_RGB.png" /> 
-        </Link>
+        </a>
         </Box>
       </Flex>
-      {location.pathname === "/list" ? (
+      {location.includes("/list") ? (
         <Popover>
           <PopoverTrigger>
             <IconButton icon={<FaSearch />} background="#AD0F5B" />
