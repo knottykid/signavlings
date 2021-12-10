@@ -1,12 +1,12 @@
 
 # Table of contents
-* [General info](#seedlify-app)
+* [General info](#seednavio-app)
 * [Technologies](#technologies-used)
 * [Stucture](#structure)
 * [Setup](#setup)
 * [Contribution](#contribution)
 
-# Seedlify App
+# Seednavio App
 
 This project is a fullstack single-page React App.
 
